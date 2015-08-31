@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Getting Started with Bootstrap</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css" />
+	</head>
+	<body>
+	<div ng-app="Connection" ng-controller="ConnectionController" class="panel panel-primary">
+	<nav class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation">
+		<div class="container-fluid">
+			<div class="row-bg">
+				<div class="row">
+				    <div class="navbar-header">
+				    	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-LI-navbar-collapse-1">
+					        <span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+						</button>
+					</div>
+				    <div class="collapse navbar-collapse " id="bs-LI-navbar-collapse-1">
+				    	<div class="container">
+					    	<div class="col-md-3">
+								<a class="navbar-brand" href="#" ><img src="images/LinkedIn_logo_initials.png" height="30" width="30"></a>
+							</div>
+							<div class="col-md-6">
+								<div class="input-prepend">
+									<div class="btn-group">
+										<button class="btn dropdown-toggle" style="font-size:12px;padding:3px 8px 0px 5px;" data-toggle="dropdown">
+											<span class="glyphicon glyphicon-align-justify" style="font-size:20px;"></span>
+										</button>
+										<ul class="dropdown-menu">
+											<li><a href="#"><span class="glyphicon glyphicon-search"></span> All</a></li>
+											<li><a href="#"><span class="glyphicon glyphicon-user"></span> People</a></li>
+											<li><a href="#"><span class="glyphicon glyphicon-briefcase"></span> Jobs</a></li>
+											<li><a href="#"><span class="glyphicon glyphicon-home"></span> Companies</a></li>
+											<li><a href="#"><span class="glyphicon glyphicon-list-alt"></span> Groups</a></li>
+											<li><a href="#"><span class="glyphicon glyphicon-education"></span> Universities</a></li>
+											<li><a href="#"><span class="glyphicon glyphicon-comment"></span> Posts</a></li>
+											<li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Inbox</a></li>
+										</ul>
+									</div>
+									<input class="textbox" ng-keyup="autofill()" id="search" type="text" placeholder="Search for people, jobs, companies, and more...">
+									<button class="button" ng-click="autosearch()"><span class="glyphicon glyphicon-search"></span></a></button>
+									<a href="#" class="adv">Advanced</a>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<ul class="nav navbar-nav navbar-right">
+							        <li><a href="#"><span class="glyphicon glyphicon-envelope" style="color:gray; font-size:25px;"></span></a></li>
+									<li><a href="#"><span class="glyphicon glyphicon-flag" style="color:gray; font-size:25px;"></span></a></li>
+									<li><a href="#"><span class="glyphicon glyphicon-plus" style="color:gray; font-size:10px;"></span><span class="glyphicon glyphicon-user" style="color:gray; font-size:25px;"></span></a></li>
+									<li class="dropdown" style="text-decoration:none;"><a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><img src="images/user.png"></a>
+										<ul class="dropdown-menu">
+											<li><a href="/logout"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
+											<li><a href="#"><span class="glyphicon glyphicon-briefcase"></span> Job Postins</a></li>
+											<li><a href="#"><span class="glyphicon glyphicon-globe"></span> Language</a></li>
+											<li><a href="#"><span class="glyphicon glyphicon-lock"></span> Privacy & Settings</a></li>
+											<li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> Help Center</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-LI-navbar-collapse-1">
+					        <span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+				      	</button>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-LI-navbar-collapse-1">
+						<div class="col-md-6">
+							<ul class="nav navbar-nav header-nav">
+							<li><a href="/profile">Home</a></li>
+							<li class="dropdown" style="text-decoration:none;"><a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Profile</a>
+								<ul class="dropdown-menu">
+									<li><a href="/editprofile">Edit Profile</a></li>
+									<li><a href="#">Who's viewed your profile</a></li>
+									<li><a href="#">Your Updates</a></li>
+									<li><a href="#">Logout</a></li>
+								</ul>
+							</li>
+							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Connections</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Keep in touch</a></li>
+									<li><a href="/Connection">Add Connections</a></li>
+									<li><a href="#">Find Alumni</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Jobs</a></li>
+							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Interests</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Companies</a></li>
+									<li><a href="#">Groups</a></li>
+									<li><a href="#">Pulse</a></li>
+									<li><a href="#">Education</a></li>
+								</ul>
+							</li>
+						</ul>
+						</div>
+				    	<div class="col-md-6 pull-right">
+				    		<ul class="nav navbar-nav header-nav">
+								<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Business Services</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Post a Job</a></li>
+									<li><a href="#">Talent Solutions</a></li>
+									<li><a href="#">Advertise</a></li>
+									<li><a href="#">Sales Solutions</a></li>
+								</ul>
+							</li>
+								<li><a href="#">Try Premiun for free</a></li>						
+							</ul>
+							<label style="color: white;font-weight: normal;padding-top:15px;">Your Last Logged in Time is :</label>
+							</br>
+							<label style="color: white;padding-left:250px" id="lastloggedintime"></label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div class="container" style="padding-left:30px;">
+	<h3 style="font-size:normal;padding-left:10px;">See Who You Already Know on LinkedIn</h3>
+		<div class="col-md-5">	
+			<table class="connectiontable">
+				<tr class="connectionrow">
+					<td class="connectioncolumn">
+						<div id="knownpeople" class="peopleconnection"></div>
+					</td>
+				</tr>
+			</table>
+		</div>	
+		<div class="col-md-7">
+		<img src="../images/image1.png"><br>
+		<img src="../images/image2.png"><br>
+		<img src="../images/image3.png">
+		</div>		
+	</div>
+	<!-- Start of Footer -->
+	<footer class="site-footer">
+		<div class="container">
+			<div class="bottom-footer">
+				
+				<div class="footer-nav">
+					<ul>
+						<li>LinkedIn Corporation © 2015</li>
+						<li><a href="#">User Agreement</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Ad Choices</a></li>
+						<li><a href="#">Community Guidelines</a></li>
+						<li><a href="#">Cookie Policy</a></li>
+						<li><a href="#">Copyright Policy</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+	<!-- End of Footer -->
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap-hover-dropdown.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	  	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	  	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script>
+		var app = angular.module("Connection", []);
+		</script>
+		<script>
+			app.controller("ConnectionController",
+						function($scope, $http,$sce) {
+							$scope.userinput = [];
+							$scope.user = [];
+							
+							$scope.autofill = function() {
+								$("#search").autocomplete({
+									source : $scope.userinput
+								})
+							};
+
+							$scope.autosearch = function() {
+								if ($("#search").val() != "") {
+									var indexVal = $scope.userinput.indexOf($("#search").val());
+									var userId = $scope.user[indexVal];
+									var str = userId.replace("@", "%");
+									window.location = '/profileview/userEmail='
+											+ userId;
+								}
+							};
+
+							$http({
+								method : 'POST',
+								url : '/showConnections'
+							}).success(function(response) {
+								dynamicUser(response);
+							}).error(function(error) {
+								alert("error");
+							});
+
+							function dynamicUser(response) {
+								var invitation = "";
+								document.getElementById("knownpeople").innerHTML = $sce.trustAsHtml(invitation);
+								if (response[0].length > 0) 
+								{
+									for (i = 0; i < response[0].length; i++) 
+									{
+										if (response[0][i].Requested == 1) 
+										{
+											invitation = invitation
+													+ '<div class="thumbnail">'
+													+ '<img src="../images/empty-profile.png" alt="img" width="20%" height="20%"><br>'
+													+ '<a class="profilelink" href="/profile'
+													+ '" style="width: 50%;">'
+													+ response[0][i].fullname
+													+ '</a><br>'
+													+ '<h4>Invite Sent</h4>'
+													+ '</div>';
+										} 
+										else if (response[0][i].Added == 1) 
+										{
+											invitation = invitation
+													+ '<div class="thumbnail">'
+													+ '<img src="../Images/empty-profile.png" alt="img" width="20%" height="20%"><br>'
+													+ '<a class="profilelink" href="/profile'
+													+ '" style="width: 50%;">'
+													+ response[0][i].fullname
+													+ '</a><br>' + '<h4>Connected</h4>'
+													+ '</div>';
+										} 
+										else if (response[0][i].Input == 1) 
+										{
+											invitation = invitation
+													+ '<div class="thumbnail">'
+													+ '<img src="../Images/empty-profile.png" alt="img" width="20%" height="20%"><br>'
+													+ '<a class="profilelink"  href="/profile'
+													+ '" style="width: 50%;">'
+													+ response[0][i].fullname
+													+ '</a><br>'
+													+ '<button class="ok">Accept</button>'
+													+ '<button class="ignore">Reject</button>'
+													+ '</div>';
+										} else 
+										{
+											invitation = invitation
+													+ '<div class="thumbnail">'
+													+ '<img src="../Images/empty-profile.png" alt="img" width="20%" height="20%"><br>'
+													+ '<a class="profilelink"  href="/profile'
+													+ '" style="width: 50%;">'
+													+ response[0][i].fullname
+													+ '</a><br>'
+													+ '<button class="invite">Connect</button>'
+													+ '</div>';
+										}
+									}
+
+								}
+								for (i = 0; i < response[1].length; i++) {
+
+									$scope.userinput.push(response[1][i].fullname);
+
+									$scope.user.push(response[1][i].username)
+
+								}
+								document.getElementById("lastloggedintime").innerHTML = response[2][0].lastLoggedIn.toString();
+								document.getElementById("knownpeople").innerHTML = $sce.trustAsHtml(invitation);
+
+								$(".invite").click(
+										function() {
+											var profileway = $(this).siblings('.profilelink').attr('href');
+											var indexVal = profileway.indexOf("=");
+											var userId = profileway.substring(indexVal + 1);
+											$http({
+												method : 'POST',
+												url : '/addconnection',
+												data : {
+													"userId" : userId
+												}
+
+											}).success(function(response) {
+												dynamicUser(response);
+											}).error(function(error) {
+												alert("error in invitation")
+											});
+
+										});
+
+								$(".ok").click(
+										function() {	
+											var profileway = $(this).siblings('.profilelink').attr('href');
+											var indexVal = profileway.indexOf("=");
+											var userId = profileway.substring(indexVal + 1);
+											$http({
+												method : 'POST',
+												url : '/acceptconnection',
+												data : {
+													"userId" : userId
+												}
+
+											}).success(function(response) {
+												dynamicUser(response);
+											}).error(function(error) {
+												alert("error in invitation")
+											});
+
+										});
+
+								$(".ignore").click(
+										function() {
+											var profileway = $(this).siblings('.profilelink').attr('href');
+											var indexVal = profileway.indexOf("=");
+											var userId = profileway.substring(indexVal + 1);
+											$http({
+												method : 'POST',
+												url : '/ignoreconnection',
+												data : {
+													"userId" : userId
+												}
+											}).success(function(response) {
+												dynamicUser(response);
+											}).error(function(error) {
+												alert("error in invitation")
+											});
+										});
+
+							}
+				});
+		</script>
+	</body>
+</html>

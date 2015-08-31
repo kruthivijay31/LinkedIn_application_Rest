@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="fullpage">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Getting Started with Bootstrap</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+	</head>
+	<body>
+	<div ng-app="" ng-controller="homeController" class="panel panel-primary">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-13 col-sm-12 col-xs-12">
+					<form>
+						<img src="images/integrations-linked-logo.jpg" style="width:400px;">
+						<button type="button" class="btn btn-primary" ng-click="signup()">
+							Sign Up
+						</button>
+						<button type="button" ng-click="login()" class="btn btn-primary">
+							Login
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script>
+		function homeController($scope,$http,$location) {
+			$scope.signup = function() {
+				//alert('signup');
+				$http.get('/signup').success(function(res){
+					//alert('in signup');
+					window.location = '/signup';
+				}).error(function(err){
+					alert('err');
+				});
+			};
+			$scope.login = function() {
+				//alert('login');
+				$http.get('/login').success(function(res){
+					//alert('in login');
+					window.location = '/login';
+
+				}).error(function(err){
+					alert('err');
+				});
+			};
+		}
+	</script>
+	</body>
+</html>

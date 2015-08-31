@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Getting Started with Bootstrap</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/profilestyle.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-tag-cloud.css">
+	</head>
+
+	<body>
+		<div ng-app="" ng-controller="sigupController" class="panel panel-primary">
+			<nav class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation">
+				<div class="container-fluid">
+					<div class="row-bg">
+						<div class="row">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-LI-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								</button>
+							</div>
+							<div class="collapse navbar-collapse " id="bs-LI-navbar-collapse-1">
+								<div class="container">
+									<div class="col-md-3">
+										<a class="navbar-brand" href="#" ><img src="images/LinkedIn_logo_initials.png" height="30" width="30"></a>
+									</div>
+									<div class="col-md-6">
+										<div class="input-prepend">
+											<div class="btn-group">
+												<button class="btn dropdown-toggle" style="font-size:12px;padding:3px 8px 0px 5px;" data-toggle="dropdown">
+													<span class="glyphicon glyphicon-align-justify" style="font-size:20px;"></span>
+												</button>
+													<ul class="dropdown-menu">
+														<li><a href="#"><span class="glyphicon glyphicon-search"></span> All</a></li>
+														<li><a href="#"><span class="glyphicon glyphicon-user"></span> People</a></li>
+														<li><a href="#"><span class="glyphicon glyphicon-briefcase"></span> Jobs</a></li>
+														<li><a href="#"><span class="glyphicon glyphicon-home"></span> Companies</a></li>
+														<li><a href="#"><span class="glyphicon glyphicon-list-alt"></span> Groups</a></li>
+														<li><a href="#"><span class="glyphicon glyphicon-education"></span> Universities</a></li>
+														<li><a href="#"><span class="glyphicon glyphicon-comment"></span> Posts</a></li>
+														<li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Inbox</a></li>
+													</ul>
+											</div>
+											<input class="textbox" type="text" placeholder="Search">
+											<button class="button"><span class="glyphicon glyphicon-search"></span></a></button>
+											<a href="#" class="adv">Advanced</a>
+										</div>
+									</div>
+
+									<div class="col-md-3">
+										<ul class="nav navbar-nav navbar-right">
+											<li><a href="#"><span class="glyphicon glyphicon-envelope" style="color:gray; font-size:25px;"></span></a></li>
+											<li><a href="#"><span class="glyphicon glyphicon-flag" style="color:gray; font-size:25px;"></span></a></li>
+											<li><a href="#"><span class="glyphicon glyphicon-plus" style="color:gray; font-size:10px;"></span><span class="glyphicon glyphicon-user" style="color:gray; font-size:25px;"></span></a></li>
+											<li class="dropdown" style="text-decoration:none;"><a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><img src="images/user.png"></a>
+												<ul class="dropdown-menu">
+													<li><a href="/logout"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
+													<li><a href="#"><span class="glyphicon glyphicon-briefcase"></span> Job Postings</a></li>
+													<li><a href="#"><span class="glyphicon glyphicon-globe"></span> Language</a></li>
+													<li><a href="#"><span class="glyphicon glyphicon-lock"></span> Privacy & Settings</a></li>
+													<li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> Help Center</a></li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="container">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-LI-navbar-collapse-1">
+							        <span class="sr-only">Toggle navigation</span>
+							        <span class="icon-bar"></span>
+							        <span class="icon-bar"></span>
+							        <span class="icon-bar"></span>
+						      	</button>
+							</div>
+							<div class="collapse navbar-collapse" id="bs-LI-navbar-collapse-1">
+								<div class="col-md-6">
+									<ul class="nav navbar-nav header-nav">
+										<li><a href="/home">Home</a></li>
+										<li class="dropdown" style="text-decoration:none;"><a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Profile</a>
+											<ul class="dropdown-menu">
+												<li><a href="/editprofile">Edit Profile</a></li>
+												<li><a href="#">Who's viewed your profile</a></li>
+												<li><a href="#">Your Updates</a></li>
+												<li><a href="#">Logout</a></li>
+											</ul>
+										</li>
+										<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Connections</a>
+											<ul class="dropdown-menu">
+												<li><a href="#">Keep in touch</a></li>
+												<li><a href="/Connection">Add Connections</a></li>
+												<li><a href="#">Find Alumni</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Jobs</a></li>
+										<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Interests</a>
+											<ul class="dropdown-menu">
+												<li><a href="#">Companies</a></li>
+												<li><a href="#">Groups</a></li>
+												<li><a href="#">Pulse</a></li>
+												<li><a href="#">Education</a></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+								<div class="col-md-6 pull-right">
+									<ul class="nav navbar-nav header-nav">
+										<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Business Services</a>
+											<ul class="dropdown-menu">
+												<li><a href="#">Post a Job</a></li>
+												<li><a href="#">Talent Solutions</a></li>
+												<li><a href="#">Advertise</a></li>
+												<li><a href="#">Sales Solutions</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Try Premiun for free</a></li>						
+									</ul>
+									<label style="color: white;font-weight: normal;padding-top:15px;">Your Last Logged in Time is :</label>
+									</br>
+									<label style="color: white;padding-left:250px" id="lastloggedintime"></label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<div class="panel-group" id="accordion">
+						<div class="panel panel-default">
+							<div class="panel-title">
+								Experience
+								<button type="button" class="btn btn-primary pull-right right" data-toggle="modal" data-target="#experience" ng-click="editExp()">Edit</button>
+							</div>
+							<div class="panel-body">
+								<label ng-model="lblTitle" class="lbl1" >{{lblTitle}}</label>
+								<br>
+								<label ng-model="lblCompany" class="lbl2">{{lblCompany}}</label>
+								<br>
+								<label ng-bind="lblLocation" class="lbl3">{{lblLocation}}</label>
+								<br>
+								<label ng-model="lblDescExp" class="lbl4">{{lblDescExp}}</label>
+							</div>
+							<div class="panel-footer">
+								<button type="button" data-toggle="modal" data-target="#experience" class="panel-footer">Add Position</button>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-title">
+								Education
+								<button type="button" class="btn btn-primary pull-right right" data-toggle="modal"  ng-click="editEdu()" data-target="#education">Edit</button>
+							</div>
+							<div class="panel-body">
+								<label ng-model="lblSchool" class="lbl1">{{lblSchool}}</label>
+								<br>
+								<p class="para">
+									<label ng-model="lblDegree" class="lbl2">{{lblDegree}}</label>,
+									<label ng-model="lblFOS" class="lbl6">{{lblFOS}}</label>,
+									<label ng-model="lblgrade" class="lbl6">{{lblgrade}}</label>
+								<p>
+								<label ng-model="lblDescSchool" class="lbl4">{{lblDescSchool}}</label>
+								<br>
+								<label class="lbl5">Activities and Societies:</label>
+								<br>
+								<label ng-model="lblActSo" class="lbl4">{{lblActSo}}</label>
+							</div>
+							<div class="panel-footer">
+								<button type="button" data-toggle="modal" data-target="#education" class="panel-footer">Add Education</button>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-title">
+								Summary
+								<button type="button" class="btn btn-primary pull-right right" data-toggle="modal" data-target="#summary" ng-click="editSum()">Edit</button>
+							</div>
+							<div class="panel-body">
+								<label ng-model="lblSummary" class="lbl4">{{lblSummary}}</label>
+							</div>
+							<div class="panel-footer">
+								<button type="button" data-toggle="modal" data-target="#summary" class="panel-footer">Add a Summary</button>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-title">
+								Skills
+								<button type="button" class="btn btn-primary pull-right right" data-toggle="modal" data-target="#skills" ng-click="editSkill()">Edit</button>
+							</div>
+							<div class="panel-body">
+								<label ng-model="lblSkills" class="lbl4">{{lblSkills}}</label>
+							</div>
+							<div class="panel-footer">
+								<button type="button" data-toggle="modal" data-target="#skills" class="panel-footer">Add Skills</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="experience" tabindex="-1" role="dialog" aria-labelledby="userExp" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="userExp">Experience</h4>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="form-group">
+								<label>Company Name</label>
+								<input type="text" ng-model="InputCompany" name="InputCompany" class="form-control" id="InputCompany" required>
+							</div>
+							<div class="form-group">
+								<label>Title</label>
+								<input type="text" ng-model="InputTitle" name="InputTitle" class="form-control" id="InputTitle" required >
+							</div>
+							<div class="form-group">
+								<label>Location</label>
+								<input type="text" ng-model="InputLocation" class="form-control" id="InputLocation" name="InputLocation">
+							</div>
+							<div class="form-group">
+								<label>Description</label>
+								<textarea class="form-control" ng-model="InputDesc" rows="5" id="InputDesc" name="InputDesc"></textarea>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" ng-click="saveExp()" class="btn btn-primary">Save</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="education" tabindex="-1" role="dialog" aria-labelledby="userEdu" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="userEdu">Education</h4>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="form-group">
+								<label>School</label>
+								<input type="text" ng-model="InputSchool" class="form-control" id="school" required>
+							</div>
+							<div class="form-group">
+								<label>Degree</label>
+								<div class="styled-select">
+								<!--<select class="selectpicker" id="selector" ng-model="Degree" required data-fv-notempty-message="Please select an item in the list">
+									<option ng-repeat="item in items" value="{{item.degreeId}}">{{item.degreeDesc}}</option>
+									<option value="" selected>--</option>
+								</select>-->
+								<select class="selectpicker" id="selector" ng-model="Degree.selected" required data-fv-notempty-message="Please select an item in the list">
+									<option value="">-</option>
+									<option value="1">High School</option>
+									<option value="2">Associate's Degree</option>
+									<option value="3">Bachelor's Degree</option>
+									<option value="4">Master's Degree</option>
+									<option value="5">Master of Business Administration(M.B.A)</option>
+									<option value="6">Juris Doctor(J.D)</option>
+									<option value="7">Doctor of Medicine(M.D)</option>
+									<option value="8">Doctor of Philosophy(Ph.D)</option>
+									<option value="9">Engineer's Degree</option>
+									<option value="10">Other</option>
+								</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label>Field of Study</label>
+								<input type="text" ng-model="InputFieldOfStudy" class="form-control" id="FOS">
+							</div>
+							<div class="form-group">
+								<label>Grade</label>
+								<input type="text" ng-model="InputGrade" class="form-control" id="FOS">
+							</div>
+							<div class="form-group">
+								<label>Activities and Societies</label>
+								<textarea class="form-control" ng-model="InputActSo" rows="3" id="AandS"></textarea>
+							</div>
+							<div class="form-group">
+								<label>Description</label>
+								<textarea class="form-control" ng-model="InputDescEdu" rows="5" id="desc"></textarea>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" ng-click="saveEdu()" class="btn btn-primary">Save</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="summary" tabindex="-1" role="dialog" aria-labelledby="userSum" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="userSum">Summary</h4>
+					</div>
+					<div class="modal-body">
+						<label>Summary</label>
+						<textarea ng-model="InputSummary" class="form-control" rows="10" id="sum"></textarea>
+					</div>
+					<div class="modal-footer">
+						<button type="button" ng-click="saveSum()" class="btn btn-primary">Save</button>
+						<button type="button" class="btn btn-default" ng-click="clearSum()" data-dismiss="modal">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="skills" tabindex="-1" role="dialog" aria-labelledby="userSkills" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="userSkills">Skills</h4>
+					</div>
+					<div class="modal-body">
+						<div id="tag-info" class="input-append">
+							<input type="text"  id="skills" style="width:400px;" placeholder="What are your areas of expertise?">
+							<button type="button" class="btn btn-primary" ng-model="addSkills">Add</button>
+						<ul id="tag-cloud"></ul>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" ng-click="saveSkill()" class="btn btn-primary">Save</button>
+						<button type="button" class="btn btn-default" ng-click="clearSkill()" data-dismiss="modal">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<footer class="site-footer">
+		<div class="container">
+			<div class="row">
+				<div class="bottom-footer">
+					<ul class="footer-nav">
+						<li><a href="#">Help Center</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Careers</a></li>
+						<li><a href="#">Advertising</a></li>
+						<li><a href="#">Talent Solutions</a></li>
+						<li><a href="#">Sales Solutions</a></li>
+						<li><a href="#">Small Business</a></li>
+						<li><a href="#">Mobile</a></li>
+						<li><a href="#">Language</a></li>
+						<li><a href="#"><strong>Upgrade Aour account</strong></a></li>
+					</ul>
+					<ul class="footer-nav">
+						<li>LinkedIn Corporation © 2015</li>
+						<li><a href="#">User Agreement</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Ad Choices</a></li>
+						<li><a href="#">Community Guidelines</a></li>
+						<li><a href="#">Cookie Policy</a></li>
+						<li><a href="#">Copyright Policy</a></li>
+						<li><a href="#">Send Feedback</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- End of Footer -->
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap-hover-dropdown.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap-tag-cloud.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	  	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	  	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script data-require="angular.js@1.3.9" data-semver="1.3.9" src="https://code.angularjs.org/1.3.9/angular.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+		<script>
+			function sigupController($scope,$http,$location) {
+
+				$http.get("/getTime")
+				.success(function(response){
+					$.each(response, function() {  
+						document.getElementById("lastloggedintime").innerHTML = this.lastLoggedIn;
+					});
+				}).error(function(error){
+					alert(error);
+				});
+				
+
+				var expflag= 1;
+				var eduflag= 1;
+
+				$scope.getDegree = function() {
+					$http.get("/getdegree")
+					.success(function(response)
+					{
+						$scope.items = JSON.stringify(response);
+					}).error(function(error){
+						alert(error);
+					});
+				};
+
+				$scope.saveExp = function() {
+
+					
+						if (expflag == 1){
+							if($scope.InputCompany == null){
+								alert("Please enter Company Name");
+							}
+							else if($scope.InputTitle == null){
+								alert("Please enter Title");
+							}
+							else{
+								if ($scope.InputLocation == null){
+									$scope.InputLocation = "";
+								}
+								if ($scope.InputDesc == null){
+									$scope.InputDesc = "";
+								}
+							//alert('hi');
+							$http({
+								method: 'POST',
+								url: '/saveExperience',
+								data: { 
+									"company": $scope.InputCompany,
+									"title": $scope.InputTitle,
+									"location": $scope.InputLocation, 
+									"description": $scope.InputDesc 
+									}  
+								}).success(function(response){
+									//alert(JSON.stringify(response));
+									if(response.exp == "Success"){
+										//alert("inside");
+										$http.get("/getExp")
+										.success(function(response){
+											//alert(response);
+											$.each(response, function() {  
+												$scope.lblCompany=this.companyName,
+												$scope.lblTitle=this.title,
+												$scope.lblLocation=this.location,
+												$scope.lblDescExp =this.description	
+											});
+											$scope.InputCompany = "";
+											$scope.InputTitle = "";
+											$scope.InputLocation = ""; 
+											$scope.InputDesc = "";
+											$('#experience').hide();
+										}).error(function(error){
+												alert(error);
+											});
+										}
+										else
+										{
+											alert("Please login!!!!");
+											window.location = '/login';
+										}
+								}).error(function(error){
+									alert(error);
+								});
+							}
+						}
+							else{
+								if($scope.InputCompany == null){
+								alert("Please enter Company Name");
+								}
+							else if($scope.InputTitle == null){
+								alert("Please enter Title");
+								}
+							else{
+								if ($scope.InputLocation == null){
+									$scope.InputLocation = "";
+								}
+								if ($scope.InputDesc == null){
+									$scope.InputDesc = "";
+								}
+								expflag=1;
+								//alert($scope.InputLocation);
+								$http({
+									method: 'POST',
+									url: '/editExperience',
+									data: { 
+										"company": $scope.InputCompany,
+										"title": $scope.InputTitle,
+										"location": $scope.InputLocation, 
+										"description": $scope.InputDesc 
+									}  
+								}).success(function(response){
+									//alert(JSON.stringify(response));
+									if(response.exp == "Success")
+									{
+										$http.get("/getExp")
+										.success(function(response)
+										{
+											$.each(response, function() {  
+												$scope.lblCompany=this.companyName,
+												$scope.lblTitle=this.title,
+												$scope.lblLocation=this.location,
+												$scope.lblDescExp =this.description	
+										});
+											$scope.InputCompany = "";
+											$scope.InputTitle = "";
+											$scope.InputLocation = ""; 
+											$scope.InputDesc = "";
+											$("#experience").hide(); 
+										}).error(function(error){
+											alert(error);
+										});
+									}
+									else
+									{
+										alert("Please login!!!!");
+										window.location = '/login';
+									}
+								}).error(function(error){
+									alert(error);
+								});
+							}
+						}
+					};
+
+					$scope.editExp = function() {
+						expflag=0;
+						$http.get("/getExp")
+						.success(function(response)
+						{
+							$.each(response, function() {   
+		    					$scope.InputCompany=this.companyName,
+		    					$scope.InputTitle=this.title,
+								$scope.InputLocation=this.location,
+								$scope.InputDesc =this.description
+							});
+						}).error(function(error){
+								alert(error);
+							});
+					};
+
+
+					$scope.saveEdu = function() {
+						
+						if (eduflag == 1){
+							if($scope.InputSchool == null){
+								alert("Please enter School Name");
+							}
+							else if($("#selector").val() === ""){
+								alert("Please Select a Degree");
+							}
+							else{
+									if ($scope.InputFieldOfStudy == null){
+										$scope.InputFieldOfStudy = "";
+									}
+									if ($scope.InputActSo == null){
+										$scope.InputActSo = "";
+									}
+									if ($scope.InputDescEdu == null){
+										$scope.InputDescEdu = "";
+									}
+									if ($scope.InputGrade == null){
+										$scope.InputGrade = "";
+									}
+								$http({
+									method: 'POST',
+									url: '/saveEducation',
+									data: { 
+										"school": $scope.InputSchool,
+										"degree": $scope.Degree.selected,
+										"fieldOfStudy": $scope.InputFieldOfStudy, 
+										"activities": $scope.InputActSo,
+										"description": $scope.InputDescEdu,
+										"grade": $scope.InputGrade 
+									}  
+								}).success(function(response){
+									if(response.edu == "Success")
+									{
+										$http.get("/getEdu")
+										.success(function(response){
+										//alert(JSON.stringify(response));
+										$.each(response, function() {  
+												$scope.lblSchool=this.school,
+												//alert($scope.lblSchool);
+												$scope.lblDegree=this.degreeDesc,
+												$scope.lblActSo=this.activities,
+												$scope.lblDescSchool =this.descriptionEdu,	
+												$scope.lblFOS =this.fieldOfStudy,
+												$scope.lblgrade =this.grade
+
+											});
+										$scope.InputSchool = "";
+    									$('#selector').prop('selectedIndex',0);
+										$scope.InputFieldOfStudy = "";
+										$scope.InputActSo = "";
+										$scope.InputDescEdu = "";
+										$scope.InputGrade = "";
+										$("#education").hide(); 
+									}).error(function(error){
+												alert(error);
+											});
+									}
+									else
+									{
+										alert("Please login!!!!");
+										window.location = '/login';
+									}
+								}).error(function(error){
+									alert(error);
+								});
+							}
+						}
+							else{
+								eduflag=1;
+								if($scope.InputSchool == null){
+									alert("Please enter School Name");
+								}
+								else if($("#selector").val() === ""){
+									alert("Please Select a Degree");
+								}
+								else{
+									if ($scope.InputFieldOfStudy == null){
+										$scope.InputFieldOfStudy = "";
+									}
+									if ($scope.InputActSo == null){
+										$scope.InputActSo = "";
+									}
+									if ($scope.InputDescEdu == null){
+										$scope.InputDescEdu = "";
+									}
+									if ($scope.InputGrade == null){
+										$scope.InputGrade = "";
+									}
+									$http({
+										method: 'POST',
+										url: '/editEducation',
+										data: { 
+											"school": $scope.InputSchool,
+											"degree": $scope.Degree.selected,
+											"fieldOfStudy": $scope.InputFieldOfStudy, 
+											"activities": $scope.InputActSo,
+											"description": $scope.InputDescEdu,
+											"grade": $scope.InputGrade 
+										}  
+									}).success(function(response){
+										if(response.edu == "Success")
+									{
+										$http.get("/getEdu")
+										.success(function(response){
+										//alert(JSON.stringify(response));
+										$.each(response, function() {  
+												$scope.lblSchool=this.school,
+												//alert($scope.lblSchool);
+												$scope.lblDegree=this.degreeDesc,
+												$scope.lblActSo=this.activities,
+												$scope.lblDescSchool =this.descriptionEdu,	
+												$scope.lblFOS =this.fieldOfStudy,
+												$scope.lblgrade =this.grade
+
+											});
+										$scope.InputSchool = "";
+										$('#selector').prop('selectedIndex',0);
+										$scope.InputFieldOfStudy = "";
+										$scope.InputActSo = "";
+										$scope.InputDescEdu = "";
+										$scope.InputGrade = "";
+										$("#education").hide(); 
+									}).error(function(error){
+												alert(error);
+											});
+									}
+									else
+									{
+										alert("Please login!!!!");
+										window.location = '/login';
+									}
+								}).error(function(error){
+									alert(error);
+								});
+							}
+						}
+					};
+
+					$scope.editEdu = function() {
+						eduflag=0;
+						$http.get("/getEdu")
+						.success(function(response)
+						{
+							//alert(JSON.stringify(response));
+							$.each(response, function() {  
+							//alert("each");   
+		    					$scope.InputSchool = this.school;
+								$("#selector").val(this.degree);
+								$scope.InputFieldOfStudy = this.fieldOfStudy;
+								$scope.InputActSo = this.activities;
+								$scope.InputDescEdu = this.descriptionEdu;
+								$scope.InputGrade = this.grade;
+							});
+						}).error(function(error)
+							{
+								alert(error);
+							});
+					};
+
+					$scope.saveSum = function() {
+						$http({
+							method: 'POST',
+							url: '/saveSummary',
+							data: {"summary": $scope.InputSummary}  
+						}).success(function(response){
+								//alert(JSON.stringify(response));
+								if(response.sum == "Success")
+								{
+									$http.get("/getSum")
+									.success(function(response){
+										//alert(JSON.stringify(response));
+
+										$.each(response, function() {  
+											$scope.lblSummary=this.summary;
+										});
+										$scope.InputSummary = "";
+										$("#summary").hide(); 
+									}).error(function(error){
+											alert(error);
+									});
+								}
+								else
+								{
+									alert("Please login!!!!");
+									window.location = '/login';
+								}
+							}).error(function(error){
+								alert(error);
+							});
+					};
+
+					$scope.editSum = function() {
+						$http.get("/getSum")
+						.success(function(response)
+						{
+							//alert(JSON.stringify(response));
+							$.each(response, function() {   
+		    					$scope.InputSummary = this.summary;
+							});
+						}).error(function(error)
+							{
+								alert(error);
+							});
+					};
+
+					$scope.saveSkill = function() {
+						var $result= $('<div class="result"></div>').append(
+						$('#tag-cloud').find('li').filter(function() {
+						return $(this).find('ul').length === 0;
+						}).map(function(i, e) {
+						return $(this).text();
+						}).get().join(' '));
+						//alert($result.html());
+						var text = $result.html();
+						$http({
+							method: 'POST',
+							url: '/saveSkill',
+							data: {"skill": text}  
+						}).success(function(response)
+							{
+								//alert(JSON.stringify(response));
+								if(response.skill == "Success")
+								{
+									$http.get("/getSkills")
+									.success(function(response){
+									alert(JSON.stringify(response));
+										$.each(response, function() {   
+			    							$scope.lblSkills = this.skills;
+										});
+										$("#skills").hide();
+									}).error(function(error){
+										alert(error);
+									});
+									//alert('inside success');
+									//window.location = '/editprofile';
+								}
+								else
+								{
+									alert("Please login!!!!");
+									window.location = '/login';
+								}
+							}).error(function(error)
+							{
+								alert(error);
+							});
+					};
+				}
+		</script>
+	</body>
+</html>

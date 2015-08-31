@@ -1,0 +1,62 @@
+.site-footer{
+	background-color: #f1efef;
+	margin-top: 30px;
+	padding-top: 30px;
+}
+
+.bottom-footer{
+	margin-top: 50px;
+	padding-top: 10px;
+	margin-bottom: 50px;
+	border-top: 1px solid #b2b2b2;
+}
+.btn{
+	background-color: #E6E6E6;
+}
+
+.footer-nav li{
+	display: inline;
+}
+
+.footer-nav{
+	text-align: center;
+}
+.footer-nav li:not(:first-child):before
+{	
+ content: '|';
+ padding: 0px 10px;
+}
+.btnnn{
+	background-color: #FBDB65;
+	width: 250px;
+	height: 40px;
+}
+
+.form-inline{
+	text-align: center;;
+}
+
+.btnnn:hover{
+	background-color: #F7D358;
+}
+
+.btnnn:active{
+	background-color: #F7D358;
+}
+
+.btn:hover
+{
+background-color: #A4A4A4;
+}
+.page-title{
+	margin-bottom: 60px;
+	color: black;
+}
+
+.form-control{
+	width:250px;
+}
+
+.navbar-default{
+	height: 100px;
+}

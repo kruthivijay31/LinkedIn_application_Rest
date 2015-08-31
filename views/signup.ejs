@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Getting Started with Bootstrap</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/styleSignup.css">
+	</head>
+	<body>
+	<div ng-app="" ng-controller="sigupController" class="panel panel-primary">
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<img src="images/integrations-linked-logo.jpg" style="width:150px;margin-top:20px;">
+				<div class="navbar-header navbar-right">
+					<form class="form-inline pull-right">
+						<div class="form-group">
+							<input type="email" ng-model="InputEmail" class="form-control" id="InputEmail" placeholder="Email address" required ><br>
+							<span style="color:red" ng-show="myForm.InputEmail.$dirty && myForm.InputEmail.$invalid">
+								<span ng-model="Email" ng-show="myForm.InputEmail.$error.required">Please enter email address</span>
+	 							<span ng-show="myForm.InputEmail.$error.email">Invalid email address.</span>
+							</span>
+						</div>
+						<div class="form-group">
+							<input type="password" ng-model="InputPassword" class="form-control" id="InputPassword" placeholder="Password" required><br>
+							<span style="color:red" ng-show="myForm.InputPassword.$dirty && myForm.InputPassword.$invalid">
+								<span ng-show="myForm.InputPassword.$error.required">Please enter Password</span>
+	 							<span ng-show="myForm.InputPassword.$error.password">Invalid Password</span>
+							</span>
+						</div>
+						<button type="submit" ng-click="login()" ng-disabled="myForm.InputEmail.$dirty && myForm.InputEmail.$invalid || myForm.InputPassword.$dirty && myForm.InputPassword.$invalid" class="btn btn-default">Sign in</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<div class="text-center">
+			<h2 class="page-title"><strong>Connect, share ideas, and discover opportunities.</strong></h2>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<img src="images/collage.jpg" style="width:500px;">
+				</div>
+				<div class="col-md-6">
+					<h3 style="color:black;"><strong>Get Started - it's free.</strong></h3>
+					<h5 style="margin-bottom:10px;">Registration takes less than 2 minutes</h5>
+					<form name="myForm">
+						
+						<input class="form-control" type="text" id="InputFirstName" name="InputFirstName" ng-model="InputFirstName" placeholder="First Name"/><br>
+
+						<input class="form-control" type="text" id="InputLastName" name="InputLastName" ng-model="InputLastName" placeholder="Last Name"/><br>
+
+						<input class="form-control" type="email" id="InputEmail" name="InputEmail" ng-model="InputEmail" placeholder="Email address" required/><br>
+						<span style="color:red" ng-show="myForm.InputEmail.$error.required && myForm.InputEmail.$dirty">Please enter email address</span>
+						<span style="color:red" ng-show="!myForm.InputEmail.$error.required && myForm.InputEmail.$error.email && myForm.InputEmail.$dirty">invalid email</span>
+
+						<input type="password" id="InputPassword" name="InputPassword" class="form-control" ng-model="InputPassword" placeholder="Password (6 or more characters)"  ng-minlength="6" ng-maxlength="20" ng-pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z])/" required  /><br>
+						<span style="color:red" ng-show="myForm.InputPassword.$error.required && myForm.InputPassword.$dirty">Please enter password</span>
+						<span style="color:red" ng-show="!myForm.InputPassword.$error.required && (myForm.InputPassword.$error.minlength || myForm.InputPassword.$error.maxlength) && myForm.InputPassword.$dirty">Password must be between 6 and 20 characters.</span>
+						<span style="color:red" ng-show="!myForm.InputPassword.$error.required && !myForm.InputPassword.$error.minlength && !myForm.InputPassword.$error.maxlength && myForm.InputPassword.$error.pattern && myForm.InputPassword.$dirty">Must contain one lower &amp; uppercase letter, and one non-alpha character (a number or a symbol)</span>
+
+						<br><button type="submit" class="btnnn btn-default" ng-disabled="!myForm.$valid" ng-click="signUp()"><strong>Join Now</strong></button>
+					</form>
+				</div>
+			</div>
+		</div>
+	<footer class="site-footer">
+		<div class="container">
+			<div class="row">
+				<form class="form-inline">
+					<div class="form-group">
+						<h5 style="margin-top:30px;"><strong>Find a Colleague: <strong></h5>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="InputFirstName" placeholder="First Name" required >
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="InputLastName" placeholder="Last Name" required>
+					</div>
+					<button type="submit" class="btn btn-default">Search</button>
+				</form>
+				<div class="bottom-footer">
+					<ul class="footer-nav">
+						<li><a href="index.html">Sign Up</a></li>
+						<li><a href="index.html">Help Center</a></li>
+						<li><a href="index.html">About</a></li>
+						<li><a href="index.html">Careers</a></li>
+						<li><a href="index.html">Advertising</a></li>
+						<li><a href="index.html">Talent Solutions</a></li>
+						<li><a href="index.html">Sales Solutions</a></li>
+						<li><a href="index.html">Small Business</a></li>
+						<li><a href="index.html">Mobile</a></li>
+						<li><a href="index.html">Language</a></li>
+						<li><a href="index.html">SlideShare</a></li>
+					</ul>
+					<ul class="footer-nav">
+						<li><a href="index.html">LinkedIn Updates</a></li>
+						<li><a href="index.html">LinkedIn Influences</a></li>
+						<li><a href="index.html">LinkedIn Jobs</a></li>
+						<li><a href="index.html">Members</a></li>
+						<li><a href="index.html">Jobs</a></li>
+						<li><a href="index.html">Pulse</a></li>
+						<li><a href="index.html">Companies</a></li>
+						<li><a href="index.html">Groups</a></li>
+						<li><a href="index.html">Universities</a></li>
+						<li><a href="index.html">Titles</a></li>
+					</ul>
+					<ul class="footer-nav">
+						<li>LinkedIn Corporation © 2015</li>
+						<li><a href="index.html">User Agreement</a></li>
+						<li><a href="index.html">Privacy Policy</a></li>
+						<li><a href="index.html">Ad Choices</a></li>
+						<li><a href="index.html">Community Guidelines</a></li>
+						<li><a href="index.html">Cookie Policy</a></li>
+						<li><a href="index.html">Copyright Policy</a></li>
+						<li><a href="index.html">Guest Controls</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	</div>
+	<!-- End of Footer -->
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	  	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+		<script>
+			function sigupController($scope,$http,$location) {
+				$scope.signUp = function() {
+					//if($scope.InputEmail == null){
+						//alert("Please enter Email address");
+					//}
+					//else if($scope.InputPassword == null){
+						//alert("Please enter password");
+					//}
+					//else{
+						alert('here');
+						alert($scope.InputEmail);
+						$http({
+							method: 'POST',
+							url: '/aftersignup',
+							data: { 
+									"firstname": $scope.InputFirstName,
+									"lastname": $scope.InputLastName,
+									"username": $scope.InputEmail, 
+									"password": $scope.InputPassword 
+								}  
+
+						}).success(function(response)
+							{
+								alert(JSON.stringify(response));
+								if(response.signup == "Success")
+								{
+									alert('hi');
+
+									window.location = '/profile';
+								}
+								else
+								{
+									alert("You have an account already!!!!");
+									window.location = '/login';
+								}
+							}).error(function(error)
+							{
+								alert(error);
+							});
+					//}
+				};
+				$scope.login = function() {
+					if($scope.InputEmail == null){
+						alert("Please enter Email address");
+					}
+					else if($scope.InputPassword == null){
+						alert("Please enter password");
+					}
+					else{
+						$http({
+							method: 'POST',
+							url: '/afterlogin',
+							data: { 
+									"username": $scope.InputEmail, 
+									"password": $scope.InputPassword 
+								}  
+
+						}).success(function(response)
+							{
+								//alert(JSON.stringify(response));
+								if(response.login == "Success")
+								{
+									window.location = '/profile';
+								}
+								else
+								{
+									alert("Please enter correct Email address and password");
+									window.location = '/login';
+								}
+							}).error(function(error)
+							{
+								alert(error);
+							});
+					}
+				};
+			}
+	</script>
+	</body>
+</html>
